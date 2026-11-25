@@ -27,9 +27,11 @@ These rules the agent must follow when working with UI.
 
 ## Icons
 
-- Default to **Tabler Icons** (outline).
-- Consistent sizing.
+- **UI icons**: **Tabler Icons** (outline) by default. Consistent sizing.
+- **Company / brand logos**: use **theSVG** (https://github.com/glincker/thesvg).
+- **Crypto / token logos**: use **cryptocurrency-icons** (https://github.com/spothq/cryptocurrency-icons).
 - Always keep at least `icon_text_gap` between icon and text. Never let them stick together.
+- Never use emoji or random SVGs when these libraries have the needed mark.
 
 ## Spacing
 
@@ -63,5 +65,6 @@ Every component and pattern must have:
 - Inconsistent spacing.
 - Flat ugly cards without hierarchy.
 - AI-slop copy.
+- Using emoji or random SVGs for logos/icons when Tabler / theSVG / cryptocurrency-icons have them.
 
 Follow DESIGN.md for all visual decisions.
