@@ -13,7 +13,8 @@ anti_patterns:
   - "ignoring provided references and producing generic or production-like UI"
   - "icons sticking to text (missing gap)"
   - "inconsistent or random spacing"
-  - "not using HeroUI-inspired neutrals for backgrounds when no reference defines them"
+  - "hard heavy borders and tiny sharp radii"
+  - "missing soft surface hierarchy"
 
 rules:
   one_primary_action: true
@@ -27,6 +28,6 @@ rules:
   polished_cards_and_grids: true
   enforce_icon_text_gap: true
   establish_spacing_rules_immediately: true
-  prefer_heroui_neutrals_for_backgrounds: true
+  prefer_soft_surfaces_over_hard_borders: true
 
 change_policy: confirm_each   # confirm_each | batch | auto
