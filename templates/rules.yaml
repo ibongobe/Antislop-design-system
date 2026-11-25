@@ -15,6 +15,7 @@ anti_patterns:
   - "inconsistent or random spacing"
   - "hard heavy borders and tiny sharp radii"
   - "missing soft surface hierarchy"
+  - "using emoji or random SVGs for company logos or crypto tokens when theSVG or cryptocurrency-icons have them"
 
 rules:
   one_primary_action: true
@@ -23,6 +24,8 @@ rules:
   real_content_preferred: true
   respect_user_font: true
   use_tabler_icons_by_default: true
+  use_thesvg_for_company_logos: true
+  use_cryptocurrency_icons_for_tokens: true
   references_drive_visual_decisions: true
   max_two_buttons_in_modals: true
   polished_cards_and_grids: true
