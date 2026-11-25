@@ -15,6 +15,12 @@ For Antislop Design System to build a working design system, it is desirable to 
 - Fonts
 - Logo / icons (if available)
 
+### Tone of Voice and copywriting
+- Preferred tone of voice / communication style (clear and concrete, friendly, formal, technical, without fluff, etc.)
+- Key terms and preferred wording / glossary
+- Examples of good microcopy (buttons, empty states, errors)
+- Examples of texts to avoid
+
 ### References
 - 2–5 screenshots of existing screens
 - Links to sites you like in density and style
