@@ -1,23 +1,27 @@
 # cards.yaml
-# Card styles by density.
+# Card styles by density. Prefer HeroUI-like soft surfaces and subtle elevation.
+# Avoid hard borders. Use radius from the density system.
 
 compact:
   padding: "12px"
-  radius: "6px"
+  radius: "8px"
   shadow: "sm"
+  border: "none or very subtle"
   gap_internal: "8px"
-  note: "Dense cards for data-heavy views"
+  note: "Soft elevation, not hard outlines"
 
 normal:
   padding: "16px"
-  radius: "8px"
+  radius: "12px"
   shadow: "md"
+  border: "none or very subtle"
   gap_internal: "12px"
-  note: "Balanced cards"
+  note: "HeroUI-like cards"
 
 airy:
   padding: "24px"
-  radius: "12px"
+  radius: "16px"
   shadow: "lg"
+  border: "none or very subtle"
   gap_internal: "16px"
-  note: "Spacious, premium-feeling cards"
+  note: "Spacious soft cards"
