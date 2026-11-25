@@ -10,7 +10,12 @@ When applied to an existing product (cabinets, dashboards, pages), the goal is a
 
 **Visual contract**: Follow `DESIGN.md` for all visual and interaction decisions.  
 **Density system**: User chooses compact / normal / airy. Use matching variants from `templates/systems/`.  
-**Icons**: Tabler outline by default. Always respect icon-text gap.  
+**Icons**:
+- UI icons: **Tabler Icons** (outline) by default.
+- Company / brand logos: **theSVG** (https://github.com/glincker/thesvg) — full-color and mono brand marks.
+- Crypto / token logos: **cryptocurrency-icons** (https://github.com/spothq/cryptocurrency-icons) — SVG/PNG coin and token icons.
+Always respect icon-text gap.
+
 **Colors**: Soft neutrals by default. Adapt accent from user brand if given.
 
 ## Strict rules
@@ -25,6 +30,11 @@ When applied to an existing product (cabinets, dashboards, pages), the goal is a
 8. **Fonts are strict**: Use the exact font specified by the user.
 9. Enforce patterns and anti-patterns from `patterns.yaml` and `rules.yaml`.
 10. Cabinet standards: max 2 buttons in modals, consistent grids, proper soft cards.
+11. **Icons priority**:
+    - UI controls, empty states, navigation, buttons → Tabler outline.
+    - Company / product logos → theSVG.
+    - Crypto coins and tokens → cryptocurrency-icons.
+    Never use emoji or random SVGs when these libraries have the mark.
 
 ## Onboarding
 
