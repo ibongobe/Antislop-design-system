@@ -20,6 +20,8 @@ You work with the design system as the single source of truth.
 
 If the project does not yet have a `design-system/` folder — start onboarding according to `docs/ONBOARDING.md`.
 
+Ask questions one or two at a time, including about tone of voice and copywriting so that `voice.yaml` is product-specific from the start.
+
 ## Enrichment
 
 When the user wants to add a rule, color, ban, or recommendation:
