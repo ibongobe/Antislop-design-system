@@ -1,9 +1,27 @@
 # colors.yaml
-# Ready palettes inspired by Mobbin brand colors (https://mobbin.com/colors/brand).
-# When user provides hex or brand colors, find the closest preset and adapt neutrals consistently.
-# Always generate full semantic set: background, surface, text, border, accent, status.
+# Primary etalon: HeroUI default theme (soft neutrals, oklch, surface hierarchy).
+# Prefer soft surfaces and subtle separators over hard borders.
+# Mobbin presets kept as secondary options for matching user brand colors.
+
+heroui_default:
+  name: "HeroUI default"
+  background: "oklch(0.9702 0 0)"          # canvas
+  surface: "#FFFFFF"
+  surface_secondary: "oklch(0.9524 0.0013 286.37)"
+  surface_tertiary: "oklch(0.9373 0.0013 286.37)"
+  text_primary: "oklch(0.2103 0.0059 285.89)"
+  text_secondary: "oklch(0.5517 0.0138 285.94)"  # muted
+  border: "oklch(90% 0.004 286.32)"             # soft
+  separator: "oklch(92% 0.004 286.32)"
+  accent: "oklch(0.6204 0.195 253.83)"
+  danger: "oklch(0.6532 0.2328 25.74)"
+  success: "oklch(0.7329 0.1935 150.81)"
+  warning: "oklch(0.7819 0.1585 72.33)"
+  source: "HeroUI default theme"
+  note: "Use this as the base. Prefer surface levels over strong borders."
 
 presets:
+  # Secondary Mobbin-inspired presets for brand matching only
   airbnb:
     name: "Airbnb-like"
     accent: "#FF385C"
@@ -11,7 +29,7 @@ presets:
     surface: "#F7F7F7"
     text_primary: "#222222"
     text_secondary: "#717171"
-    border: "#DDDDDD"
+    border: "#E5E5E5"   # softened
     source: "Mobbin Airbnb"
 
   stripe:
@@ -34,38 +52,8 @@ presets:
     border: "#DFE3E6"
     source: "Mobbin Linear style"
 
-  apple:
-    name: "Apple-like"
-    accent: "#0066CC"
-    background: "#F5F5F7"
-    surface: "#FFFFFF"
-    text_primary: "#1D1D1F"
-    text_secondary: "#86868B"
-    border: "#D2D2D7"
-    source: "Mobbin Apple"
-
-  spotify:
-    name: "Spotify-like"
-    accent: "#1DB954"
-    background: "#FFFFFF"
-    surface: "#F8F8F8"
-    text_primary: "#191414"
-    text_secondary: "#535353"
-    border: "#E5E5E5"
-    source: "Mobbin Spotify"
-
-  neutral_default:
-    name: "Neutral modern"
-    accent: "#2563EB"
-    background: "#FFFFFF"
-    surface: "#F8F9FA"
-    text_primary: "#111827"
-    text_secondary: "#6B7280"
-    border: "#E5E7EB"
-    source: "HeroUI / base"
-
-# Matching logic (for agent):
-# 1. If user gives exact hex or brand name — use or adapt the closest preset.
-# 2. Generate consistent neutrals (surface, muted, border) from the accent if needed.
-# 3. Always include success / warning / danger that work with the accent.
-# 4. Mark source and density compatibility.
+# Matching logic:
+# 1. Default to heroui_default for neutrals and surfaces.
+# 2. If user gives brand hex — find closest preset accent and adapt the HeroUI neutral structure around it.
+# 3. Prefer subtle borders / surface hierarchy. Avoid heavy black borders.
+# 4. Always generate full semantic set.
