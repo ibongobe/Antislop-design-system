@@ -13,7 +13,11 @@ All generated UI must follow these rules. Product-specific tokens live in `desig
 - Soft surfaces and subtle elevation over heavy outlines.
 - Consistent spacing and radii. Never mix systems on one screen.
 - Accessible, keyboard-friendly, visible focus states.
-- Tabler Icons (outline) by default. Always keep gap between icon and text.
+- Icons:
+  - UI icons: Tabler Icons (outline) by default.
+  - Company / brand logos: theSVG (https://github.com/glincker/thesvg).
+  - Crypto / token logos: cryptocurrency-icons (https://github.com/spothq/cryptocurrency-icons).
+  Always keep gap between icon and text.
 
 ## Colors
 
@@ -80,7 +84,7 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Use semantic tokens and the density system.
 - Establish hierarchy with spacing, type, and surface levels.
 - Keep one strong accent.
-- Use Tabler icons with proper gap.
+- Use Tabler for UI icons, theSVG for company logos, cryptocurrency-icons for crypto tokens. Always with proper gap.
 - Follow user references when provided, but keep this polish level.
 
 ## Don't
@@ -93,5 +97,6 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Flat ugly cards without hierarchy.
 - AI-slop phrases ("Unlock the power of", "Seamless experience").
 - Ignoring user-specified font or provided references.
+- Using emoji or random SVGs for logos when theSVG or cryptocurrency-icons have them.
 
 This contract + the YAML files in `design-system/` are the single source of truth.
