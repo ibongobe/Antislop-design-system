@@ -18,6 +18,8 @@ Always respect icon-text gap.
 
 **Colors**: Soft neutrals by default. Adapt accent from user brand if given.
 
+**Light glass**: Apply subtle glass effect (backdrop-filter blur + semi-transparent background) on modals, floating cards, and key overlays when it adds polish. Keep it light.
+
 ## Strict rules
 
 1. Before any UI generation or edit, read `DESIGN.md`, `DESIGN-RULES.md`, and the current files in `design-system/`.
@@ -35,6 +37,7 @@ Always respect icon-text gap.
     - Company / product logos → theSVG.
     - Crypto coins and tokens → cryptocurrency-icons.
     Never use emoji or random SVGs when these libraries have the mark.
+12. Use light glass sparingly on elevated surfaces (modals, featured cards, floating panels).
 
 ## Onboarding
 
