@@ -1,64 +1,41 @@
 # Antislop Design System Onboarding
 
-If the project does not have a `design-system/` folder — start with onboarding. Ask questions one or two at a time. Do not generate the interface until you get the minimum or an explicit "do it on the base template".
+If the project does not have a `design-system/` folder — start with onboarding. Ask questions one or two at a time.
 
-**Important**: Provided references (screenshots, links, existing screens) are the primary source for visual decisions. Analyze them deeply. The final DS and generated UI must reflect them, not look like current production or generic base.
+**Critical**: Density choice drives the entire system.
 
 ## Stage 0. Context
 
-1. What is the product? (dashboard, admin, B2C site, etc.)
-2. On which platforms? (web, mobile web, iOS, Android)
-3. Are there already screens / mockups / references? (If yes — describe or attach them; we will base visual language on them)
+1. What is the product?
+2. Platforms?
+3. Existing screens / mockups / references?
 
 ## Stage 1. Brand and visual
 
-4. Are there brand colors? (hex or "no, pick neutral" / derive from references)
-5. Are there fonts? (exact name, e.g. "Roobert PRO", or "system"). **Will be used exactly as specified.**
-6. Interface density? (compact / normal / airy)
+4. Brand colors? (hex or "no, pick / match closest from Mobbin")
+5. Font? (exact name, e.g. Roobert PRO)
+6. **Interface density?** (compact / normal / airy) — this selects the full system of radii, spacing, type scale, cards, layouts.
 
-## Stage 2. Tone of Voice and copywriting
+## Stage 2. Tone of Voice
 
-7. What is the preferred tone of voice / communication style? (e.g. clear and concrete without marketing fluff, friendly, formal, technical, concise)
-8. Are there preferred terms, wording, or glossary for key concepts? (or "plain language")
-9. Examples of good microcopy / button labels / empty states? Examples of texts to avoid? (or "use base examples")
+7–9. TOV, terms, good/bad examples.
 
 ## Stage 3. Key entities
 
-10. What are the main entities? (for example: payments, users, tasks)
-11. What are the 3–5 most important screens?
+10–11. Main entities and screens.
 
 ## Stage 4. Showcase
 
-12. Where to build the design system showcase?
-   - Figma
-   - Storybook
-   - Both
-   - Not needed yet
+12. Where to build showcase?
 
 ## Stage 5. Assembly
 
-After the answers, create in the project:
+After density is known:
 
-```
-design-system/
-  tokens.yaml
-  components.yaml
-  patterns.yaml
-  rules.yaml
-  voice.yaml
-DESIGN-RULES.md
-DECISIONS.md
-```
+1. Copy matching variants from `templates/systems/` (radius, spacing, typography, colors, cards, layouts).
+2. Merge into project `design-system/`.
+3. Apply color matching logic if user gave hex.
+4. Mark unconfirmed values.
+5. Create DESIGN-RULES.md and DECISIONS.md.
 
-Copy the structure from `templates/` and fill in known values. Prefer values derived from references and exact user inputs (especially font). Mark everything unknown as `source: base, unconfirmed`.
-
-In `DECISIONS.md` list what still needs to be clarified.
-
-## Behavior on empty input
-
-If the user says "just do it" or skips questions:
-
-- Use the base templates.
-- Mark everything as `source: base, unconfirmed`.
-- In the final message list what should be clarified so the system becomes product-specific.
-- Even then, apply polished cabinet patterns (max 2 buttons in modals, good cards/grids, Tabler icons) so the result is better than raw production.
+Result should be a coherent, density-aware design system that feels intentional.
