@@ -1,5 +1,5 @@
 # tokens.yaml
-# Базовый шаблон. Заполняется при онбординге.
+# Base template. Filled during onboarding.
 
 meta:
   version: "0.1.0"
@@ -8,10 +8,10 @@ meta:
 color:
   background:
     value: "#FFFFFF"
-    use_when: "основной фон"
+    use_when: "main background"
   surface:
     value: "#F8F9FA"
-    use_when: "карточки, панели"
+    use_when: "cards, panels"
   text:
     primary:
       value: "#111827"

@@ -1,36 +1,36 @@
 # DESIGN-RULES.md
 
-Эти правила агент обязан соблюдать при любой работе с UI.
+These rules the agent must follow when working with UI.
 
-## Источник правды
+## Source of truth
 
-- Единственный источник правды — файлы в `design-system/`.
-- Перед генерацией или правкой UI прочитай актуальные YAML.
-- Не придумывай цвета, радиусы, отступы, компоненты, состояния и тексты.
-- Если чего-то нет в YAML — остановись и спроси.
+- The single source of truth is the files in `design-system/`.
+- Before generating or editing UI, read the current YAML files.
+- Do not invent colors, radii, spacing, components, states, or texts.
+- If something is missing from YAML — stop and ask.
 
-## Состояния
+## States
 
-Каждый компонент и паттерн должен иметь:
+Every component and pattern must have:
 - `loading`
 - `empty`
 - `error`
 
-Если состояния отсутствуют — предложи их добавить.
+If states are missing — propose adding them.
 
-## Изменения
+## Changes
 
-- Новые правила, цвета, анти-правила и рекомендации фиксируй только через обновление YAML.
-- Всегда предлагай изменение и жди подтверждения (если не указано иное в `change_policy`).
-- После подтверждения обнови соответствующий файл и `DECISIONS.md`.
+- New rules, colors, anti-patterns, and recommendations are fixed only by updating YAML.
+- Always propose the change and wait for confirmation (unless otherwise specified in `change_policy`).
+- After confirmation update the corresponding file and `DECISIONS.md`.
 
-## При пустом входе
+## Empty input
 
-Используй базовые шаблоны из репозитория Anti-Slop DS и помечай значения как `source: base, unconfirmed`.
+Use the base templates from the Anti-Slop DS repository and mark values as `source: base, unconfirmed`.
 
-## Запрещено
+## Forbidden
 
-- Генерировать UI в обход `design-system/`.
-- Придумывать «похожие» значения.
-- Игнорировать `never` и `anti_patterns`.
-- Создавать компоненты без состояний.
+- Generating UI outside of `design-system/`.
+- Inventing "similar" values.
+- Ignoring `never` and `anti_patterns`.
+- Creating components without states.

@@ -1,12 +1,12 @@
 # rules.yaml
 
 anti_patterns:
-  - "фиолетовые / синие градиенты как основной акцент"
-  - "Inter / Roboto как единственный шрифт без причины"
-  - "emoji вместо иконок"
-  - "три одинаковые карточки в ряд с иконками"
-  - "разные радиусы и тени на одном экране"
-  - "тексты 'Unlock the power of', 'Seamless experience'"
+  - "purple / blue gradients as the main accent"
+  - "Inter / Roboto as the only font without reason"
+  - "emoji instead of icons"
+  - "three identical cards in a row with icons"
+  - "different radii and shadows on the same screen"
+  - "texts 'Unlock the power of', 'Seamless experience'"
 
 rules:
   one_primary_action: true

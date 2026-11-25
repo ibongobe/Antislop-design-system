@@ -1,33 +1,33 @@
-# Что нужно дать на вход
+# What to provide as input
 
-Чтобы Anti-Slop DS собрал рабочую дизайн-систему, желательно дать следующее. Если чего-то нет — агент возьмёт базовый шаблон и пометит как unconfirmed.
+For Anti-Slop DS to build a working design system, it is desirable to provide the following. If something is missing — the agent will take the base template and mark it as unconfirmed.
 
-## Обязательный минимум
+## Required minimum
 
-- Тип продукта (кабинет / дашборд / лендинг / и т.д.)
-- Платформы (web, mobile)
-- 1–3 ключевых экрана или сущности
+- Product type (dashboard / admin / landing / etc.)
+- Platforms (web, mobile)
+- 1–3 key screens or entities
 
-## Желательно
+## Desirable
 
-### Бренд
-- Основные цвета (hex)
-- Шрифты
-- Логотип / иконки (если есть)
+### Brand
+- Main colors (hex)
+- Fonts
+- Logo / icons (if available)
 
-### Референсы
-- 2–5 скриншотов существующих экранов
-- Ссылки на сайты, которые нравятся по плотности и стилю
-- Анти-референсы («вот так точно не надо»)
+### References
+- 2–5 screenshots of existing screens
+- Links to sites you like in density and style
+- Anti-references ("definitely not like this")
 
-### Контент
-- Реальные примеры данных (названия, суммы, статусы)
-- Термины, которые используются в продукте
+### Content
+- Real data examples (names, amounts, statuses)
+- Terms used in the product
 
-### Правила
-- Что точно запрещено (градиенты, emoji-иконки, определённые цвета и т.д.)
-- Особенности (например, «всегда одна primary-кнопка», «никаких модалок для подтверждения удаления»)
+### Rules
+- What is strictly forbidden (gradients, emoji icons, certain colors, etc.)
+- Specifics (for example, "always one primary button", "no modals for delete confirmation")
 
-## Что будет, если ничего не дать
+## What happens if you give nothing
 
-Агент создаст нейтральную консистентную систему на базовом шаблоне. Нейрослоп внутри неё будет минимальным, но она не будет отражать бренд и специфику продукта. Позже её можно обогащать.
+The agent will create a neutral consistent system on the base template. There will be minimal AI slop inside it, but it will not reflect the brand and product specifics. You can enrich it later.

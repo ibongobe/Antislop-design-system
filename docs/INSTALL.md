@@ -1,25 +1,25 @@
-# Установка
+# Installation
 
-## Через skills (рекомендуется)
+## Via skills (recommended)
 
 ```bash
 npx skills add ibongobe/Antislop-design-system
 ```
 
-Работает с Claude Code, Cursor, Codex, Cline и другими агентами, которые поддерживают Agent Skills.
+Works with Claude Code, Cursor, Codex, Cline, and other agents that support Agent Skills.
 
-## Вручную
+## Manually
 
-Скопируй папку `skills/anti-slop-ds` в:
+Copy the `skills/anti-slop-ds` folder into:
 
 - Claude Code: `.claude/skills/`
 - Cursor: `.cursor/skills/`
-- Или в глобальную папку скиллов агента
+- Or into the agent's global skills folder
 
-## После установки
+## After installation
 
-Скажи агенту:
+Tell the agent:
 
-> Запусти Anti-Slop DS. Проведи онбординг и создай дизайн-систему в проекте.
+> Start Anti-Slop DS. Run onboarding and create the design system in the project.
 
-Агент прочитает `SKILL.md`, проведёт онбординг и создаст папку `design-system/` с разбитыми YAML-файлами.
+The agent will read `SKILL.md`, run onboarding, and create a `design-system/` folder with split YAML files.

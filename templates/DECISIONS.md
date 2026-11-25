@@ -1,13 +1,13 @@
 # DECISIONS.md
 
-## Не подтверждено (базовый шаблон)
+## Unconfirmed (base template)
 
-- Цвета (взяты нейтральные)
-- Типографика (системные шрифты)
-- Плотность
-- Конкретные компоненты под продукт
-- Термины
+- Colors (neutral taken)
+- Typography (system fonts)
+- Density
+- Concrete components for the product
+- Terms
 
-## Как обогащать
+## How to enrich
 
-Любое новое правило, цвет, анти-паттерн или компонент добавляется через предложение агента и подтверждение. После подтверждения обновляется соответствующий YAML и эта запись.
+Any new rule, color, anti-pattern, or component is added through an agent proposal and confirmation. After confirmation the corresponding YAML and this record are updated.

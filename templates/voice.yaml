@@ -1,22 +1,22 @@
 # voice.yaml
 
-tone: "ясный, конкретный, без маркетингового пафоса"
+tone: "clear, concrete, without marketing fluff"
 
 terms:
-  # Пример:
-  # payment: "платёж"
-  # user: "пользователь"
+  # Example:
+  # payment: "payment"
+  # user: "user"
 
 examples:
   good:
-    - "Платёж не прошёл. Проверьте данные карты."
-    - "Пока нет платежей за этот период."
+    - "Payment failed. Check your card details."
+    - "No payments for this period."
   bad:
-    - "Упс! Что-то пошло не так."
+    - "Oops! Something went wrong."
     - "No data"
     - "Unlock seamless payments"
 
 never:
-  - "восклицательные знаки в ошибках"
-  - "технические сообщения пользователю"
-  - "placeholder-тексты в продакшене"
+  - "exclamation marks in errors"
+  - "technical messages to the user"
+  - "placeholder texts in production"

@@ -1,35 +1,35 @@
-# Онбординг Anti-Slop DS
+# Anti-Slop DS Onboarding
 
-Если в проекте нет папки `design-system/` — начни с онбординга. Задавай вопросы по одному-два. Не генерируй интерфейс, пока не получишь минимум или явное «сделай на базовом шаблоне».
+If the project does not have a `design-system/` folder — start with onboarding. Ask questions one or two at a time. Do not generate the interface until you get the minimum or an explicit "do it on the base template".
 
-## Этап 0. Контекст
+## Stage 0. Context
 
-1. Что за продукт? (кабинет, дашборд, B2C-сайт, админка и т.д.)
-2. На каких платформах? (web, mobile web, iOS, Android)
-3. Есть ли уже экраны / макеты / референсы?
+1. What is the product? (dashboard, admin, B2C site, etc.)
+2. On which platforms? (web, mobile web, iOS, Android)
+3. Are there already screens / mockups / references?
 
-## Этап 1. Бренд и визуал
+## Stage 1. Brand and visual
 
-4. Есть ли фирменные цвета? (hex или «нет, подбери нейтральные»)
-5. Есть ли шрифты? (название или «системные»)
-6. Плотность интерфейса? (компактный / обычный / воздушный)
+4. Are there brand colors? (hex or "no, pick neutral")
+5. Are there fonts? (name or "system")
+6. Interface density? (compact / normal / airy)
 
-## Этап 2. Ключевые сущности
+## Stage 2. Key entities
 
-7. Какие основные сущности? (например: платежи, пользователи, задачи)
-8. Какие 3–5 самых важных экранов?
+7. What are the main entities? (for example: payments, users, tasks)
+8. What are the 3–5 most important screens?
 
-## Этап 3. Витрина
+## Stage 3. Showcase
 
-9. Где строить витрину дизайн-системы?
+9. Where to build the design system showcase?
    - Figma
    - Storybook
-   - И то, и другое
-   - Пока не нужно
+   - Both
+   - Not needed yet
 
-## Этап 4. Сбор
+## Stage 4. Assembly
 
-После ответов создай в проекте:
+After the answers, create in the project:
 
 ```
 design-system/
@@ -42,14 +42,14 @@ DESIGN-RULES.md
 DECISIONS.md
 ```
 
-Скопируй структуру из `templates/` и заполни известными значениями. Всё неизвестное помечай `source: base, unconfirmed`.
+Copy the structure from `templates/` and fill in known values. Mark everything unknown as `source: base, unconfirmed`.
 
-В `DECISIONS.md` перечисли, что ещё нужно уточнить.
+In `DECISIONS.md` list what still needs to be clarified.
 
-## Поведение при пустом входе
+## Behavior on empty input
 
-Если пользователь говорит «сделай как есть» или пропускает вопросы:
+If the user says "just do it" or skips questions:
 
-- Используй базовые шаблоны.
-- Помечай всё как `source: base, unconfirmed`.
-- В финальном сообщении выведи список того, что стоит уточнить, чтобы система стала продуктовой.
+- Use the base templates.
+- Mark everything as `source: base, unconfirmed`.
+- In the final message list what should be clarified so the system becomes product-specific.
