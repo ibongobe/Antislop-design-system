@@ -1,5 +1,6 @@
 # patterns.yaml
 # Includes standard polished patterns for cabinets / dashboards.
+# Prefer HeroUI-like interactivity and structure.
 
 EmptyState:
   required: [title, description]
@@ -36,9 +37,10 @@ Form:
 # Cabinet / Dashboard standards (use these by default for admin UIs)
 
 ModalDialog:
-  description: "Focused overlay for confirmations or short forms"
+  description: "Focused overlay for confirmations or short forms (HeroUI Modal style)"
   footer: "max 2 buttons"
   layout: "title + content + actions aligned consistently"
+  interactions: "smooth enter/exit, backdrop, focus management"
   never:
     - "three or more buttons"
     - "cramped or random button order"
@@ -46,7 +48,7 @@ ModalDialog:
 CardGrid:
   description: "Responsive grid of cards"
   columns: "auto-fit with consistent gap from spacing scale"
-  cards: "use Card component with consistent elevation"
+  cards: "use Card component with consistent elevation and compound structure"
   never:
     - "no grid, just stacked or random placement"
     - "ugly flat cards without hierarchy"
@@ -61,4 +63,4 @@ SidebarLayout:
   nav: "consistent items with Tabler icons"
   content: "clear max-width or fluid with proper padding"
 
-# When transforming an existing cabinet, prefer these patterns to create visual polish and consistency.
+# When transforming an existing cabinet, prefer these patterns + HeroUI-level polish to create visual and interactive "wow".
