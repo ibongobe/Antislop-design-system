@@ -1,0 +1,23 @@
+# cards.yaml
+# Card styles by density.
+
+compact:
+  padding: "12px"
+  radius: "6px"
+  shadow: "sm"
+  gap_internal: "8px"
+  note: "Dense cards for data-heavy views"
+
+normal:
+  padding: "16px"
+  radius: "8px"
+  shadow: "md"
+  gap_internal: "12px"
+  note: "Balanced cards"
+
+airy:
+  padding: "24px"
+  radius: "12px"
+  shadow: "lg"
+  gap_internal: "16px"
+  note: "Spacious, premium-feeling cards"
