@@ -9,6 +9,8 @@ You work with the design system as the single source of truth. When applied to a
 
 **Visual & interaction etalon**: Use [HeroUI React components](https://heroui.com/en/docs/react/components) as the reference for polished components, semantic variants, compound structure, animations, and interactivity. Prefer HeroUI-like quality: subtle scale on press, smooth transitions, clear focus rings, surface elevation, one strong accent, accessible states.
 
+**Color palette for backgrounds and neutrals**: Default to HeroUI-inspired oklch neutrals (background, surface, surface-secondary, muted, border) unless the user's reference clearly defines otherwise. Put them in tokens.yaml.
+
 ## Strict rules
 
 1. Before any UI generation or edit, read `DESIGN-RULES.md` and the current files in `design-system/`.
@@ -17,28 +19,29 @@ You work with the design system as the single source of truth. When applied to a
 4. All components and patterns must have states: `loading`, `empty`, `error`. If they are missing — propose adding them.
 5. New rules, colors, anti-patterns, and recommendations are fixed only by updating YAML with user confirmation.
 6. On empty input use the base templates from `templates/` and mark everything as `source: base, unconfirmed`.
-7. **References are primary**: If the user provides screenshots, mockups, links, or existing screens as references — deeply analyze them for density, layout, color usage, component style, spacing, and visual language. Derive tokens and patterns from them. Do not ignore references and fall back to generic base. The output must visibly reflect the references, not look like current production or plain base.
+7. **References are primary and rigid**: If the user provides screenshots, mockups, links, or existing screens as references — deeply analyze them for density, layout, color usage, component style, spacing, and visual language. Derive tokens and patterns **directly** from them. Do not ignore or dilute the reference. The output must visibly match the style of the reference, not current production or generic base.
 8. **Fonts are strict**: If the user specifies a font (e.g. "Roobert PRO"), put it exactly in `tokens.yaml` under `typography.font_family` and use it in all generation. Never silently switch to system-ui or Inter/Roboto. Only use system fonts if the user explicitly says "system" or "no preference".
-9. **Icons**: Default icon library is **Tabler Icons** (outline style preferred). Use Tabler icons wherever icons are appropriate (buttons, empty states, navigation, cards, lists). Specify in components/patterns. Prefer consistent sizing (usually 16–24px). Do not use emoji, random SVGs, or other libraries unless explicitly requested.
-10. **Cabinet / Dashboard patterns**: Prefer and enforce standard polished patterns for admin/cabinet UIs:
+9. **Icons**: Default icon library is **Tabler Icons** (outline style preferred). Use Tabler icons wherever icons are appropriate. Always apply at least `icon_text_gap` (default 8px) between icon and text. Never let icons stick to text.
+10. **Spacing rules from the start**: Immediately establish and enforce spacing rules in tokens.yaml (icon-text gap, card padding, stack gaps, section gaps). Use the scale consistently. Never allow elements to stick together.
+11. **Cabinet / Dashboard patterns**: Prefer and enforce standard polished patterns for admin/cabinet UIs:
     - Modals: maximum 2 buttons (primary action + secondary/cancel). Never 3+ buttons in one modal footer.
     - Cards: consistent padding, subtle shadow or border, proper hierarchy, not flat ugly blocks. Use grid layouts.
     - Layouts: clear grid systems, consistent spacing from tokens, good visual rhythm.
     - Overall: elevate existing screens to look intentional and modern when applying the DS.
-11. **HeroUI as component etalon**: When defining or generating components, follow HeroUI principles:
-    - Semantic variants (primary / secondary / tertiary / ghost / danger) instead of purely visual ones.
-    - Compound structure where useful (e.g. Card with Header / Content / Footer).
-    - Interactive states with motion: scale transform on press (`data-pressed`), hover elevation or background shift, visible focus ring (accent color), loading/pending states.
+12. **HeroUI as component etalon**: When defining or generating components, follow HeroUI principles:
+    - Semantic variants (primary / secondary / tertiary / ghost / danger).
+    - Compound structure where useful.
+    - Interactive states with motion: scale on press, hover, visible focus ring, loading states.
     - Smooth CSS transitions. Respect reduced-motion.
-    - One strong accent color. Use surface levels for hierarchy instead of heavy borders.
-    - Accessible by default (keyboard, ARIA, focus management).
+    - One strong accent color. Use surface levels for hierarchy.
+    - Accessible by default.
 
 ## Onboarding
 
 If the project does not yet have a `design-system/` folder — start onboarding according to `docs/ONBOARDING.md`.
 
 Ask questions one or two at a time. Especially emphasize:
-- References (analyze them deeply)
+- References (analyze them deeply and bind styles rigidly)
 - Exact font name
 - Tone of voice and copywriting
 
@@ -61,10 +64,10 @@ When the user wants to add a rule, color, ban, or recommendation:
 
 ## Design system files
 
-- `design-system/tokens.yaml` — colors, typography (exact font), spacing, radius, shadow
+- `design-system/tokens.yaml` — colors (HeroUI neutrals by default), typography (exact font), spacing (with icon-text gap), radius, shadow
 - `design-system/components.yaml` — components with states, never, and Tabler icon usage (HeroUI-inspired polish)
-- `design-system/patterns.yaml` — patterns including cabinet/dashboard standards (modals, cards, grids, etc.)
+- `design-system/patterns.yaml` — patterns including cabinet/dashboard standards
 - `design-system/rules.yaml` — rules and anti-patterns
 - `design-system/voice.yaml` — tone, terms, examples
 
-Never generate UI outside these files. When transforming an existing cabinet, refactor screens to use the DS components and patterns so the result is visibly better and more polished than production. Aim for HeroUI-level interactivity and visual quality.
+Never generate UI outside these files. When transforming an existing cabinet, refactor screens to use the DS components and patterns so the result is visibly better and more polished than production. Aim for HeroUI-level interactivity and visual quality, rigidly matching the user's reference style.
