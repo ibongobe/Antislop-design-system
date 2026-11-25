@@ -1,6 +1,6 @@
 # What to provide as input
 
-For Anti-Slop DS to build a working design system, it is desirable to provide the following. If something is missing — the agent will take the base template and mark it as unconfirmed.
+For Antislop Design System to build a working design system, it is desirable to provide the following. If something is missing — the agent will take the base template and mark it as unconfirmed.
 
 ## Required minimum
 

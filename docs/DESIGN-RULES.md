@@ -26,7 +26,7 @@ If states are missing — propose adding them.
 
 ## Empty input
 
-Use the base templates from the Anti-Slop DS repository and mark values as `source: base, unconfirmed`.
+Use the base templates from the Antislop Design System repository and mark values as `source: base, unconfirmed`.
 
 ## Forbidden
 

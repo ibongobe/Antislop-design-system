@@ -1,4 +1,4 @@
-# Anti-Slop DS Onboarding
+# Antislop Design System Onboarding
 
 If the project does not have a `design-system/` folder — start with onboarding. Ask questions one or two at a time. Do not generate the interface until you get the minimum or an explicit "do it on the base template".
 

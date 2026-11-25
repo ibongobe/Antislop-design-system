@@ -1,6 +1,6 @@
 <div align="center">
 
-# Anti-Slop DS
+# Antislop Design System
 
 Build your design system and remove AI slop from projects you make with AI agents.
 
@@ -12,7 +12,7 @@ Build your design system and remove AI slop from projects you make with AI agent
 
 ---
 
-**Anti-Slop DS** gives the agent a single source of truth — your design system in YAML. The agent takes colors, radii, components, states, and text only from there. If something is missing, it stops and asks instead of inventing.
+**Antislop Design System** gives the agent a single source of truth — your design system in YAML. The agent takes colors, radii, components, states, and text only from there. If something is missing, it stops and asks instead of inventing.
 
 This is not a post-hoc filter. It is a source of truth the agent reads before generating any UI.
 
@@ -22,7 +22,7 @@ Examples will be added after test runs on real projects. Below is the grid struc
 
 ### UI
 
-| **Before: without Anti-Slop DS** | **After: Anti-Slop DS** |
+| **Before: without Antislop Design System** | **After: Antislop Design System** |
 |:--|:--|
 | <img src="assets/examples/ui-before.png" alt="AI slop: inconsistent colors, random radii, No data" width="100%"> | <img src="assets/examples/ui-after.png" alt="Consistent interface from the design system" width="100%"> |
 | Different colors across screens, random radii, "No data", buttons of different sizes. | Everything from YAML: one set of colors, radii, states, and texts. The agent does not invent. |
@@ -73,7 +73,7 @@ Details — in [docs/INSTALL.md](docs/INSTALL.md).
 ## FAQ
 
 **How is this different from a regular anti-slop filter?**
-A filter removes signs after generation. Anti-Slop DS prevents the agent from inventing — it takes only from your design system.
+A filter removes signs after generation. Antislop Design System prevents the agent from inventing — it takes only from your design system.
 
 **What if I give nothing as input?**
 The agent creates a neutral consistent system on the base template and marks values as `source: base, unconfirmed`. You can enrich it later.

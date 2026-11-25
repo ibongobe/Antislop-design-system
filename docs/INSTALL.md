@@ -20,6 +20,6 @@ Copy the `skills/anti-slop-ds` folder into:
 
 Tell the agent:
 
-> Start Anti-Slop DS. Run onboarding and create the design system in the project.
+> Start Antislop Design System. Run onboarding and create the design system in the project.
 
 The agent will read `SKILL.md`, run onboarding, and create a `design-system/` folder with split YAML files.
