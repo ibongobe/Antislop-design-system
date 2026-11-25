@@ -1,13 +1,16 @@
 # components.yaml
-# Base components. Each must have states and never.
+# Base + polished cabinet components. Each must have states and never.
+# Use Tabler icons where appropriate.
 
 Button:
   use_when: "primary action"
   variants: [primary, secondary, ghost, danger]
   states: [default, hover, active, disabled, loading]
+  icons: "optional, from Tabler"
   never:
     - "more than one primary button in a block without a clear reason"
     - "button without text and without aria-label"
+    - "three or more buttons in a modal footer"
 
 Input:
   use_when: "data entry"
@@ -17,9 +20,14 @@ Input:
 
 Card:
   use_when: "grouping related content"
-  states: [default]
+  variants: [default, elevated, outlined]
+  states: [default, hover]
+  padding: "from spacing scale (prefer 16–24px)"
+  shadow_or_border: "subtle, from tokens"
   never:
     - "nested cards deeper than 2 levels"
+    - "flat unstyled blocks with no visual separation"
+    - "inconsistent padding or radius across cards on the same screen"
 
 Badge:
   use_when: "status or category"
@@ -27,4 +35,12 @@ Badge:
   never:
     - "more than 3 badges in one row without grouping"
 
-# Add new components using the same template
+Modal:
+  use_when: "focused task or confirmation"
+  footer_buttons: "maximum 2 (primary + secondary/cancel). Primary usually on the right."
+  states: [open, closing]
+  never:
+    - "three or more action buttons in the footer"
+    - "missing close affordance or escape behavior"
+
+# Add new components using the same template. Prefer Tabler icons.
