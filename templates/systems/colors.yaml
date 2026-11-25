@@ -1,0 +1,71 @@
+# colors.yaml
+# Ready palettes inspired by Mobbin brand colors (https://mobbin.com/colors/brand).
+# When user provides hex or brand colors, find the closest preset and adapt neutrals consistently.
+# Always generate full semantic set: background, surface, text, border, accent, status.
+
+presets:
+  airbnb:
+    name: "Airbnb-like"
+    accent: "#FF385C"
+    background: "#FFFFFF"
+    surface: "#F7F7F7"
+    text_primary: "#222222"
+    text_secondary: "#717171"
+    border: "#DDDDDD"
+    source: "Mobbin Airbnb"
+
+  stripe:
+    name: "Stripe-like"
+    accent: "#635BFF"
+    background: "#FFFFFF"
+    surface: "#F6F9FC"
+    text_primary: "#0A2540"
+    text_secondary: "#425466"
+    border: "#E3E8EE"
+    source: "Mobbin / modern fintech"
+
+  linear:
+    name: "Linear-like"
+    accent: "#5E6AD2"
+    background: "#FFFFFF"
+    surface: "#F7F8F8"
+    text_primary: "#11181C"
+    text_secondary: "#687076"
+    border: "#DFE3E6"
+    source: "Mobbin Linear style"
+
+  apple:
+    name: "Apple-like"
+    accent: "#0066CC"
+    background: "#F5F5F7"
+    surface: "#FFFFFF"
+    text_primary: "#1D1D1F"
+    text_secondary: "#86868B"
+    border: "#D2D2D7"
+    source: "Mobbin Apple"
+
+  spotify:
+    name: "Spotify-like"
+    accent: "#1DB954"
+    background: "#FFFFFF"
+    surface: "#F8F8F8"
+    text_primary: "#191414"
+    text_secondary: "#535353"
+    border: "#E5E5E5"
+    source: "Mobbin Spotify"
+
+  neutral_default:
+    name: "Neutral modern"
+    accent: "#2563EB"
+    background: "#FFFFFF"
+    surface: "#F8F9FA"
+    text_primary: "#111827"
+    text_secondary: "#6B7280"
+    border: "#E5E7EB"
+    source: "HeroUI / base"
+
+# Matching logic (for agent):
+# 1. If user gives exact hex or brand name — use or adapt the closest preset.
+# 2. Generate consistent neutrals (surface, muted, border) from the accent if needed.
+# 3. Always include success / warning / danger that work with the accent.
+# 4. Mark source and density compatibility.
