@@ -11,6 +11,9 @@ anti_patterns:
   - "no grid system in card or content layouts"
   - "ugly flat cards without consistent padding, radius or separation"
   - "ignoring provided references and producing generic or production-like UI"
+  - "icons sticking to text (missing gap)"
+  - "inconsistent or random spacing"
+  - "not using HeroUI-inspired neutrals for backgrounds when no reference defines them"
 
 rules:
   one_primary_action: true
@@ -22,5 +25,8 @@ rules:
   references_drive_visual_decisions: true
   max_two_buttons_in_modals: true
   polished_cards_and_grids: true
+  enforce_icon_text_gap: true
+  establish_spacing_rules_immediately: true
+  prefer_heroui_neutrals_for_backgrounds: true
 
 change_policy: confirm_each   # confirm_each | batch | auto
