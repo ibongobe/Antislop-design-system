@@ -14,20 +14,26 @@ If the project does not have a `design-system/` folder — start with onboarding
 5. Are there fonts? (name or "system")
 6. Interface density? (compact / normal / airy)
 
-## Stage 2. Key entities
+## Stage 2. Tone of Voice and copywriting
 
-7. What are the main entities? (for example: payments, users, tasks)
-8. What are the 3–5 most important screens?
+7. What is the preferred tone of voice / communication style? (e.g. clear and concrete without marketing fluff, friendly, formal, technical, concise)
+8. Are there preferred terms, wording, or glossary for key concepts? (or "plain language")
+9. Examples of good microcopy / button labels / empty states? Examples of texts to avoid? (or "use base examples")
 
-## Stage 3. Showcase
+## Stage 3. Key entities
 
-9. Where to build the design system showcase?
+10. What are the main entities? (for example: payments, users, tasks)
+11. What are the 3–5 most important screens?
+
+## Stage 4. Showcase
+
+12. Where to build the design system showcase?
    - Figma
    - Storybook
    - Both
    - Not needed yet
 
-## Stage 4. Assembly
+## Stage 5. Assembly
 
 After the answers, create in the project:
 
