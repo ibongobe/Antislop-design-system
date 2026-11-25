@@ -1,0 +1,23 @@
+# layouts.yaml
+# Layout density systems (sidebar, grids, bento).
+
+compact:
+  sidebar_width: "220px"
+  content_padding: "16px"
+  grid_gap: "12px"
+  bento_gap: "12px"
+  note: "Tight layouts for dashboards with lots of data"
+
+normal:
+  sidebar_width: "256px"
+  content_padding: "24px"
+  grid_gap: "16px"
+  bento_gap: "16px"
+  note: "Standard cabinet layout"
+
+airy:
+  sidebar_width: "280px"
+  content_padding: "32px"
+  grid_gap: "24px"
+  bento_gap: "24px"
+  note: "Spacious, calm layouts"
