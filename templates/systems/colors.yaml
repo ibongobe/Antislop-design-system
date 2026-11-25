@@ -1,59 +1,53 @@
 # colors.yaml
-# Primary etalon: HeroUI default theme (soft neutrals, oklch, surface hierarchy).
-# Prefer soft surfaces and subtle separators over hard borders.
-# Mobbin presets kept as secondary options for matching user brand colors.
+# Soft neutral base. Prefer surface hierarchy over hard borders.
+# Adapt accent from user brand when provided. Keep neutrals consistent.
 
-heroui_default:
-  name: "HeroUI default"
-  background: "oklch(0.9702 0 0)"          # canvas
+default:
+  name: "Soft neutral"
+  background: "#F7F7F8"
   surface: "#FFFFFF"
-  surface_secondary: "oklch(0.9524 0.0013 286.37)"
-  surface_tertiary: "oklch(0.9373 0.0013 286.37)"
-  text_primary: "oklch(0.2103 0.0059 285.89)"
-  text_secondary: "oklch(0.5517 0.0138 285.94)"  # muted
-  border: "oklch(90% 0.004 286.32)"             # soft
-  separator: "oklch(92% 0.004 286.32)"
-  accent: "oklch(0.6204 0.195 253.83)"
-  danger: "oklch(0.6532 0.2328 25.74)"
-  success: "oklch(0.7329 0.1935 150.81)"
-  warning: "oklch(0.7819 0.1585 72.33)"
-  source: "HeroUI default theme"
-  note: "Use this as the base. Prefer surface levels over strong borders."
+  surface_secondary: "#F3F4F6"
+  surface_tertiary: "#EBECEF"
+  text_primary: "#111827"
+  text_secondary: "#6B7280"
+  border: "#E5E7EB"
+  separator: "#F0F0F1"
+  accent: "#2563EB"
+  danger: "#DC2626"
+  success: "#16A34A"
+  warning: "#D97706"
+  note: "Default soft palette. Prefer surfaces over strong borders."
 
 presets:
-  # Secondary Mobbin-inspired presets for brand matching only
   airbnb:
-    name: "Airbnb-like"
+    name: "Warm accent"
     accent: "#FF385C"
     background: "#FFFFFF"
     surface: "#F7F7F7"
     text_primary: "#222222"
     text_secondary: "#717171"
-    border: "#E5E5E5"   # softened
-    source: "Mobbin Airbnb"
+    border: "#E5E5E5"
 
   stripe:
-    name: "Stripe-like"
+    name: "Fintech blue"
     accent: "#635BFF"
     background: "#FFFFFF"
     surface: "#F6F9FC"
     text_primary: "#0A2540"
     text_secondary: "#425466"
     border: "#E3E8EE"
-    source: "Mobbin / modern fintech"
 
   linear:
-    name: "Linear-like"
+    name: "Product blue"
     accent: "#5E6AD2"
     background: "#FFFFFF"
     surface: "#F7F8F8"
     text_primary: "#11181C"
     text_secondary: "#687076"
     border: "#DFE3E6"
-    source: "Mobbin Linear style"
 
 # Matching logic:
-# 1. Default to heroui_default for neutrals and surfaces.
-# 2. If user gives brand hex — find closest preset accent and adapt the HeroUI neutral structure around it.
+# 1. Default to the soft neutral set.
+# 2. If user gives brand hex — pick closest preset accent and keep the soft neutral structure.
 # 3. Prefer subtle borders / surface hierarchy. Avoid heavy black borders.
-# 4. Always generate full semantic set.
+# 4. Always generate full semantic set (background, surface, text, border, accent, status).
