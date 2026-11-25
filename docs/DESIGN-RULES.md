@@ -17,12 +17,13 @@ Use [HeroUI React](https://heroui.com/en/docs/react/components) as the visual an
 - Semantic variants (primary / secondary / tertiary / ghost / danger).
 - Compound structure where it improves clarity.
 - Interactive feedback: subtle scale on press, hover states, visible accent focus rings, smooth CSS transitions.
-- Surface hierarchy instead of heavy borders.
+- **Surface hierarchy instead of heavy borders**. Prefer soft surfaces, subtle separators, and elevation.
+- Larger, softer radii (never tiny sharp corners).
 - One strong accent color.
 - Accessible states and keyboard support.
 - Smooth overlay enter/exit animations.
 
-**Color palette**: For backgrounds and neutral shades use HeroUI-inspired oklch values (background, surface, surface-secondary, muted, border) unless the user's reference defines otherwise. Put them in tokens.yaml.
+**Color palette**: Default to HeroUI neutrals (oklch background, surface, surface-secondary, muted, soft border). If user gives brand color — adapt the HeroUI surface system around it.
 
 ## Fonts
 
@@ -54,8 +55,8 @@ If states are missing — propose adding them.
 ## Cabinet / Dashboard standards
 
 - Modals: maximum 2 buttons in the footer.
-- Cards and layouts: use consistent grids, proper spacing, elevated or clearly separated cards with hierarchy.
-- Goal when applying to existing project: create a visible "wow" — polished, modern, intentional UI with HeroUI-level interactivity that rigidly follows the user's reference style.
+- Cards and layouts: use consistent grids, proper spacing, soft elevated cards (not hard-bordered boxes).
+- Goal when applying to existing project: create a visible "wow" — polished, modern, intentional UI with HeroUI-level quality that follows the user's reference style.
 
 ## Changes
 
@@ -79,3 +80,4 @@ Use the base templates from the Antislop Design System repository and mark value
 - Missing interactive feedback (hover, press scale, focus ring) on interactive elements.
 - Icons sticking to text (missing gap).
 - Inconsistent or missing spacing rules.
+- **Hard heavy borders** and **tiny sharp radii** (prefer soft surfaces + larger radii like HeroUI).
