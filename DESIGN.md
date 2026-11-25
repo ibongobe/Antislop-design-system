@@ -85,6 +85,11 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Lists, tables, forms: consistent spacing and states.
 - Every component and pattern must have loading / empty / error states.
 
+## Redesign rules
+
+- When redesigning an existing page, **preserve all UX elements**. Keep every functional control, action, data point, and piece of information. Restyle and improve hierarchy, but do not remove or hide anything functional.
+- You may suggest UX improvements based on heuristics (e.g. reduce modal buttons to 2, group lists longer than 7±2 items, clarify primary action). Present them as recommendations.
+
 ## Interaction
 
 - Visible focus ring (accent color).
@@ -99,6 +104,8 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Keep one strong accent.
 - Use Tabler for UI icons, theSVG for company logos, cryptocurrency-icons for crypto tokens. Always with proper gap.
 - Apply light glass sparingly for polish on cards and overlays.
+- Preserve all existing UX elements when redesigning.
+- Suggest UX improvements when obvious issues exist (but do not apply them silently).
 - Follow user references when provided, but keep this polish level.
 
 ## Don't
@@ -113,5 +120,6 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Ignoring user-specified font or provided references.
 - Using emoji or random SVGs for logos when theSVG or cryptocurrency-icons have them.
 - Overusing heavy glass or refraction effects that hurt performance or readability.
+- Removing or hiding existing functional UX elements during redesign.
 
 This contract + the YAML files in `design-system/` are the single source of truth.
