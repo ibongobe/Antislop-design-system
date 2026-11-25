@@ -52,6 +52,16 @@ Every component and pattern must have:
 - Cards and layouts: consistent grids, proper spacing, soft elevated cards.
 - Goal: visible improvement — polished, intentional UI that follows the user's reference and DESIGN.md.
 
+## Redesign rules
+
+- **Preserve all UX elements**: When redesigning an existing page or cabinet, keep every functional element, action, data point, filter, control, and piece of information that was present. Do not remove or hide them. You may restyle, regroup, improve hierarchy, or apply better patterns, but nothing functional should disappear.
+- **UX recommendations**: You may suggest improvements based on established UX heuristics and patterns. Examples:
+  - More than 2 buttons in a modal footer → recommend reducing or using progressive disclosure.
+  - Lists or groups with more than 7±2 items without grouping → recommend grouping or progressive disclosure.
+  - Unclear primary action → recommend making one action primary.
+  - Overloaded screens → recommend hierarchy or progressive disclosure.
+  Present recommendations separately. Do not apply them automatically unless the user confirms.
+
 ## Forbidden
 
 - Generating UI outside of the design system.
@@ -59,7 +69,8 @@ Every component and pattern must have:
 - Ignoring anti-patterns.
 - Creating components without states.
 - Ignoring user-specified font or provided references.
-- 3+ buttons in modals.
+- Removing or hiding existing UX elements during redesign.
+- 3+ buttons in modals (as a pattern to avoid).
 - Hard heavy borders and tiny sharp radii.
 - Icons sticking to text.
 - Inconsistent spacing.
