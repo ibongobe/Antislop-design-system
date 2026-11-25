@@ -38,6 +38,8 @@ Always respect icon-text gap.
     - Crypto coins and tokens → cryptocurrency-icons.
     Never use emoji or random SVGs when these libraries have the mark.
 12. Use light glass sparingly on elevated surfaces (modals, featured cards, floating panels).
+13. **Preserve all UX elements on redesign**: When redesigning an existing page, keep every functional element, action, data point, and control that was present. Do not remove or hide UX elements. You may restyle, regroup, or improve hierarchy, but nothing functional should disappear.
+14. **UX recommendations**: You may suggest improvements based on established UX heuristics and patterns (e.g. max 2 buttons in modals, avoid more than 7±2 items in a list without grouping, clear primary action, progressive disclosure). Present them as recommendations, not automatic changes.
 
 ## Onboarding
 
