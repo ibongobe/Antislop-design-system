@@ -2,16 +2,25 @@
 
 anti_patterns:
   - "purple / blue gradients as the main accent"
-  - "Inter / Roboto as the only font without reason"
+  - "Inter / Roboto as the only font without reason (or ignoring user-specified font)"
   - "emoji instead of icons"
   - "three identical cards in a row with icons"
   - "different radii and shadows on the same screen"
   - "texts 'Unlock the power of', 'Seamless experience'"
+  - "three or more buttons in a modal footer"
+  - "no grid system in card or content layouts"
+  - "ugly flat cards without consistent padding, radius or separation"
+  - "ignoring provided references and producing generic or production-like UI"
 
 rules:
   one_primary_action: true
   consistent_states: true
   no_invented_metrics: true
   real_content_preferred: true
+  respect_user_font: true
+  use_tabler_icons_by_default: true
+  references_drive_visual_decisions: true
+  max_two_buttons_in_modals: true
+  polished_cards_and_grids: true
 
 change_policy: confirm_each   # confirm_each | batch | auto
