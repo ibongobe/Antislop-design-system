@@ -9,6 +9,7 @@ patterns:
       - clear title and description
       - soft elevation
       - consistent padding from density system
+      - prefer light glass background (backdrop-filter blur + semi-transparent surface)
     states: [loading, empty, error]
 
   Card:
@@ -18,6 +19,7 @@ patterns:
       - soft radius
       - prefer subtle shadow or surface over hard border
       - clear hierarchy inside
+      - optional light glass (backdrop blur + transparency) on featured or floating cards
     states: [loading, empty, error]
 
   CardGrid:
