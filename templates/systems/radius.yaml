@@ -1,0 +1,26 @@
+# radius.yaml
+# Three density systems. Selected by user density choice.
+
+compact:
+  sm: "2px"
+  md: "4px"
+  lg: "6px"
+  xl: "8px"
+  full: "9999px"
+  note: "Smaller, sharper corners for dense interfaces"
+
+normal:
+  sm: "4px"
+  md: "8px"
+  lg: "12px"
+  xl: "16px"
+  full: "9999px"
+  note: "Balanced modern radii"
+
+airy:
+  sm: "6px"
+  md: "12px"
+  lg: "16px"
+  xl: "24px"
+  full: "9999px"
+  note: "Softer, larger radii for spacious UIs"
