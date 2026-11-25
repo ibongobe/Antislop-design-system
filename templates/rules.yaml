@@ -16,6 +16,8 @@ anti_patterns:
   - "hard heavy borders and tiny sharp radii"
   - "missing soft surface hierarchy"
   - "using emoji or random SVGs for company logos or crypto tokens when theSVG or cryptocurrency-icons have them"
+  - "removing or hiding existing UX elements during redesign"
+  - "lists or groups with more than 7±2 items without grouping or progressive disclosure"
 
 rules:
   one_primary_action: true
@@ -32,5 +34,7 @@ rules:
   enforce_icon_text_gap: true
   establish_spacing_rules_immediately: true
   prefer_soft_surfaces_over_hard_borders: true
+  preserve_all_ux_elements_on_redesign: true
+  suggest_ux_improvements_when_obvious: true
 
 change_policy: confirm_each   # confirm_each | batch | auto
