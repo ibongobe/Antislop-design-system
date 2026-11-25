@@ -1,0 +1,30 @@
+# patterns.yaml
+
+EmptyState:
+  required: [title, description]
+  optional: [action]
+  never:
+    - "просто текст 'No data' или 'Ничего не найдено' без объяснения"
+
+LoadingState:
+  required: [indicator]
+  prefer: "skeleton или spinner из токенов"
+  never:
+    - "разные лоадеры на разных экранах без причины"
+
+ErrorState:
+  required: [title, description]
+  optional: [retry_action]
+  never:
+    - "просто 'Error' или технический текст"
+
+List:
+  states: [loading, empty, error, populated]
+  never:
+    - "бесконечный список без пагинации или виртуализации на больших данных"
+
+Form:
+  states: [idle, submitting, success, error]
+  never:
+    - "отправка без индикации состояния"
+    - "ошибки только в alert, без привязки к полям"

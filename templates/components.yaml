@@ -1,0 +1,30 @@
+# components.yaml
+# Базовые компоненты. Каждый должен иметь states и never.
+
+Button:
+  use_when: "основное действие"
+  variants: [primary, secondary, ghost, danger]
+  states: [default, hover, active, disabled, loading]
+  never:
+    - "более одной primary-кнопки в одном блоке без явной причины"
+    - "кнопка без текста и без aria-label"
+
+Input:
+  use_when: "ввод данных"
+  states: [default, focus, error, disabled]
+  never:
+    - "placeholder вместо label"
+
+Card:
+  use_when: "группировка связанного контента"
+  states: [default]
+  never:
+    - "вложенные карточки глубже 2 уровней"
+
+Badge:
+  use_when: "статус или категория"
+  variants: [neutral, success, warning, danger]
+  never:
+    - "более 3 бейджей в одной строке без группировки"
+
+# Добавляй новые компоненты по тому же шаблону

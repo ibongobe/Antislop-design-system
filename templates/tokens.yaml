@@ -1,0 +1,52 @@
+# tokens.yaml
+# Базовый шаблон. Заполняется при онбординге.
+
+meta:
+  version: "0.1.0"
+  source: base, unconfirmed
+
+color:
+  background:
+    value: "#FFFFFF"
+    use_when: "основной фон"
+  surface:
+    value: "#F8F9FA"
+    use_when: "карточки, панели"
+  text:
+    primary:
+      value: "#111827"
+    secondary:
+      value: "#6B7280"
+  border:
+    value: "#E5E7EB"
+  accent:
+    value: "#2563EB"
+    use_when: "primary actions"
+  danger:
+    value: "#DC2626"
+  success:
+    value: "#16A34A"
+
+typography:
+  font_family:
+    sans: "system-ui, -apple-system, sans-serif"
+  size:
+    xs: "12px"
+    sm: "14px"
+    base: "16px"
+    lg: "18px"
+    xl: "20px"
+    "2xl": "24px"
+
+spacing:
+  scale: [4, 8, 12, 16, 24, 32, 48, 64]
+
+radius:
+  sm: "4px"
+  md: "8px"
+  lg: "12px"
+  full: "9999px"
+
+shadow:
+  sm: "0 1px 2px rgba(0,0,0,0.05)"
+  md: "0 4px 6px rgba(0,0,0,0.07)"

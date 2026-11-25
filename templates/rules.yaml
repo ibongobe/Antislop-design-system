@@ -1,0 +1,17 @@
+# rules.yaml
+
+anti_patterns:
+  - "фиолетовые / синие градиенты как основной акцент"
+  - "Inter / Roboto как единственный шрифт без причины"
+  - "emoji вместо иконок"
+  - "три одинаковые карточки в ряд с иконками"
+  - "разные радиусы и тени на одном экране"
+  - "тексты 'Unlock the power of', 'Seamless experience'"
+
+rules:
+  one_primary_action: true
+  consistent_states: true
+  no_invented_metrics: true
+  real_content_preferred: true
+
+change_policy: confirm_each   # confirm_each | batch | auto
