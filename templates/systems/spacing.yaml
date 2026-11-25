@@ -1,0 +1,26 @@
+# spacing.yaml
+# Density-dependent spacing scale and semantic gaps.
+
+compact:
+  scale: [2, 4, 6, 8, 12, 16, 24, 32]
+  icon_text_gap: "4px"
+  card_padding: "12px"
+  section_gap: "16px"
+  stack_gap: "8px"
+  note: "Tight spacing for dense data-heavy interfaces"
+
+normal:
+  scale: [4, 8, 12, 16, 24, 32, 48, 64]
+  icon_text_gap: "8px"
+  card_padding: "16px"
+  section_gap: "24px"
+  stack_gap: "12px"
+  note: "Comfortable default spacing"
+
+airy:
+  scale: [8, 12, 16, 24, 32, 48, 64, 96]
+  icon_text_gap: "12px"
+  card_padding: "24px"
+  section_gap: "40px"
+  stack_gap: "16px"
+  note: "Generous spacing for calm, spacious interfaces"
