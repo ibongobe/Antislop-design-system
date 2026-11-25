@@ -19,6 +19,18 @@ All generated UI must follow these rules. Product-specific tokens live in `desig
   - Crypto / token logos: cryptocurrency-icons (https://github.com/spothq/cryptocurrency-icons).
   Always keep gap between icon and text.
 
+## Light Glass Effect
+
+Use a subtle glass / frosted look on elevated surfaces when it adds polish (cards, modals, dropdowns, floating panels).
+
+Recommended implementation (lightweight, works everywhere):
+- `backdrop-filter: blur(12px)` to `blur(20px)`
+- Semi-transparent background: `rgba(255,255,255,0.7)` or `rgba(255,255,255,0.85)` in light mode
+- Soft border: `1px solid rgba(255,255,255,0.4)` or very light separator
+- Optional very light shadow for depth
+
+Keep it light. Do not overuse. Prefer on overlays and key cards, not on every surface. Respect reduced-motion and performance.
+
 ## Colors
 
 Use semantic tokens. Do not hardcode random hex values.
@@ -62,13 +74,14 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Avoid heavy hard borders.
 - Cards and raised content use light elevation.
 - Overlays (modals, dropdowns) use stronger elevation.
+- Optional light glass (backdrop blur + transparency) on key elevated surfaces.
 
 ## Components & Patterns
 
 - Semantic variants: primary / secondary / tertiary / ghost / danger.
 - Maximum one primary action per context.
-- Modals: max 2 buttons in footer.
-- Cards: consistent padding, soft elevation or subtle border, clear hierarchy, grid layouts.
+- Modals: max 2 buttons in footer. Prefer light glass background.
+- Cards: consistent padding, soft elevation or subtle border, clear hierarchy, grid layouts. Light glass optional on featured cards.
 - Lists, tables, forms: consistent spacing and states.
 - Every component and pattern must have loading / empty / error states.
 
@@ -85,6 +98,7 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - Establish hierarchy with spacing, type, and surface levels.
 - Keep one strong accent.
 - Use Tabler for UI icons, theSVG for company logos, cryptocurrency-icons for crypto tokens. Always with proper gap.
+- Apply light glass sparingly for polish on cards and overlays.
 - Follow user references when provided, but keep this polish level.
 
 ## Don't
@@ -98,5 +112,6 @@ Prefer soft neutrals. Adapt accent from user brand if provided, keep neutral str
 - AI-slop phrases ("Unlock the power of", "Seamless experience").
 - Ignoring user-specified font or provided references.
 - Using emoji or random SVGs for logos when theSVG or cryptocurrency-icons have them.
+- Overusing heavy glass or refraction effects that hurt performance or readability.
 
 This contract + the YAML files in `design-system/` are the single source of truth.
