@@ -1,10 +1,13 @@
 # patterns.yaml
+# Includes standard polished patterns for cabinets / dashboards.
 
 EmptyState:
   required: [title, description]
-  optional: [action]
+  optional: [action, icon]
+  icon: "Tabler icon preferred"
   never:
     - "just the text 'No data' or 'Nothing found' without explanation"
+    - "emoji as the only visual"
 
 LoadingState:
   required: [indicator]
@@ -14,7 +17,8 @@ LoadingState:
 
 ErrorState:
   required: [title, description]
-  optional: [retry_action]
+  optional: [retry_action, icon]
+  icon: "Tabler icon preferred"
   never:
     - "just 'Error' or technical text"
 
@@ -28,3 +32,33 @@ Form:
   never:
     - "submit without state indication"
     - "errors only in alert, without binding to fields"
+
+# Cabinet / Dashboard standards (use these by default for admin UIs)
+
+ModalDialog:
+  description: "Focused overlay for confirmations or short forms"
+  footer: "max 2 buttons"
+  layout: "title + content + actions aligned consistently"
+  never:
+    - "three or more buttons"
+    - "cramped or random button order"
+
+CardGrid:
+  description: "Responsive grid of cards"
+  columns: "auto-fit with consistent gap from spacing scale"
+  cards: "use Card component with consistent elevation"
+  never:
+    - "no grid, just stacked or random placement"
+    - "ugly flat cards without hierarchy"
+
+DataTable:
+  description: "Tabular data with consistent styling"
+  states: [loading, empty, error, populated]
+  features: "optional sorting, pagination, row actions with Tabler icons"
+
+SidebarLayout:
+  description: "Typical cabinet navigation + content"
+  nav: "consistent items with Tabler icons"
+  content: "clear max-width or fluid with proper padding"
+
+# When transforming an existing cabinet, prefer these patterns to create visual polish and consistency.
