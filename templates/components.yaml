@@ -1,29 +1,41 @@
 # components.yaml
-# Base + polished cabinet components. Each must have states and never.
-# Use Tabler icons where appropriate.
+# Base + polished cabinet components inspired by HeroUI.
+# Each must have states and never. Use Tabler icons where appropriate.
+# Interactive states should include subtle motion (scale on press, hover, focus ring).
 
 Button:
   use_when: "primary action"
-  variants: [primary, secondary, ghost, danger]
-  states: [default, hover, active, disabled, loading]
+  variants: [primary, secondary, tertiary, ghost, danger]
+  states: [default, hover, active/pressed, disabled, loading/pending]
+  interactions:
+    - "scale slightly on press (data-pressed)"
+    - "visible focus ring with accent color"
+    - "smooth transition on hover"
   icons: "optional, from Tabler"
   never:
     - "more than one primary button in a block without a clear reason"
     - "button without text and without aria-label"
     - "three or more buttons in a modal footer"
+    - "missing focus indicator or press feedback"
 
 Input:
   use_when: "data entry"
   states: [default, focus, error, disabled]
+  interactions:
+    - "focus ring with accent"
+    - "clear error state bound to field"
   never:
     - "placeholder instead of label"
 
 Card:
   use_when: "grouping related content"
-  variants: [default, elevated, outlined]
+  variants: [default, secondary, tertiary, transparent]
+  structure: "compound: Header (Title + Description) / Content / Footer"
   states: [default, hover]
   padding: "from spacing scale (prefer 16–24px)"
-  shadow_or_border: "subtle, from tokens"
+  shadow_or_border: "subtle surface elevation from tokens"
+  interactions:
+    - "optional hover elevation or subtle background shift if pressable"
   never:
     - "nested cards deeper than 2 levels"
     - "flat unstyled blocks with no visual separation"
@@ -39,8 +51,12 @@ Modal:
   use_when: "focused task or confirmation"
   footer_buttons: "maximum 2 (primary + secondary/cancel). Primary usually on the right."
   states: [open, closing]
+  interactions:
+    - "smooth enter/exit (fade + slight scale or zoom)"
+    - "backdrop dim"
+    - "focus trap and escape to close"
   never:
     - "three or more action buttons in the footer"
     - "missing close affordance or escape behavior"
 
-# Add new components using the same template. Prefer Tabler icons.
+# Add new components using the same template. Prefer Tabler icons and HeroUI-level polish (semantic variants + motion).
