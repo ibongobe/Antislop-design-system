@@ -1,38 +1,51 @@
 # tokens.yaml
-# Base template. Filled during onboarding. Prefer values derived from user references.
+# Base template. Prefer values derived from user references first.
+# Neutral / background palette inspired by HeroUI default theme (oklch).
 
 meta:
-  version: "0.2.0"
+  version: "0.3.0"
   source: base, unconfirmed
 
 color:
+  # HeroUI-inspired neutrals and surfaces (light mode defaults)
   background:
-    value: "#FFFFFF"
-    use_when: "main background"
+    value: "oklch(0.9702 0 0)"   # HeroUI canvas
+    use_when: "main page background"
   surface:
-    value: "#F8F9FA"
-    use_when: "cards, panels"
+    value: "#FFFFFF"
+    use_when: "cards, panels, elevated surfaces"
+  surface_secondary:
+    value: "oklch(0.9524 0.0013 286.37)"
+    use_when: "nested or lower-emphasis regions"
+  surface_tertiary:
+    value: "oklch(0.9373 0.0013 286.37)"
+    use_when: "stronger surface separation"
   text:
     primary:
-      value: "#111827"
+      value: "oklch(0.2103 0.0059 285.89)"
     secondary:
-      value: "#6B7280"
+      value: "oklch(0.5517 0.0138 285.94)"  # muted
+    muted:
+      value: "oklch(0.5517 0.0138 285.94)"
   border:
-    value: "#E5E7EB"
+    value: "oklch(90% 0.004 286.32)"
+  separator:
+    value: "oklch(92% 0.004 286.32)"
   accent:
-    value: "#2563EB"
-    use_when: "primary actions"
+    value: "oklch(0.6204 0.195 253.83)"
+    use_when: "primary actions, focus"
   danger:
-    value: "#DC2626"
+    value: "oklch(0.6532 0.2328 25.74)"
   success:
-    value: "#16A34A"
+    value: "oklch(0.7329 0.1935 150.81)"
+  warning:
+    value: "oklch(0.7819 0.1585 72.33)"
 
 typography:
   font_family:
     # IMPORTANT: replace with exact user-specified font. Never default to system if user named a font.
     # Example for Roobert PRO: "Roobert PRO", "Roobert", sans-serif
     sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    # mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
   size:
     xs: "12px"
     sm: "14px"
@@ -43,6 +56,12 @@ typography:
 
 spacing:
   scale: [4, 8, 12, 16, 24, 32, 48, 64]
+  # Explicit rules — always apply
+  icon_text_gap: "8px"          # minimum gap between icon and adjacent text
+  icon_text_gap_tight: "4px"    # only for very compact
+  card_padding: "16px"
+  section_gap: "24px"
+  stack_gap: "12px"
 
 radius:
   sm: "4px"
@@ -59,4 +78,4 @@ icons:
   library: "tabler"
   style: "outline"
   default_size: "20px"
-  note: "Use Tabler Icons by default. Prefer outline. Consistent sizing."
+  note: "Use Tabler Icons by default. Always keep at least icon_text_gap from text."
