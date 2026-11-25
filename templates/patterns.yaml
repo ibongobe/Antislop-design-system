@@ -1,66 +1,57 @@
 # patterns.yaml
-# Includes standard polished patterns for cabinets / dashboards.
-# Prefer HeroUI-like interactivity and structure.
+# Standard polished patterns. Use these by default when transforming cabinets or generating pages.
 
-EmptyState:
-  required: [title, description]
-  optional: [action, icon]
-  icon: "Tabler icon preferred"
-  never:
-    - "just the text 'No data' or 'Nothing found' without explanation"
-    - "emoji as the only visual"
+patterns:
+  ModalDialog:
+    description: "Standard modal with clear primary action"
+    rules:
+      - maximum 2 buttons in footer (primary + secondary/cancel)
+      - clear title and description
+      - soft elevation
+      - consistent padding from density system
+    states: [loading, empty, error]
 
-LoadingState:
-  required: [indicator]
-  prefer: "skeleton or spinner from tokens"
-  never:
-    - "different loaders on different screens without reason"
+  Card:
+    description: "Elevated or softly separated card"
+    rules:
+      - consistent padding from density
+      - soft radius
+      - prefer subtle shadow or surface over hard border
+      - clear hierarchy inside
+    states: [loading, empty, error]
 
-ErrorState:
-  required: [title, description]
-  optional: [retry_action, icon]
-  icon: "Tabler icon preferred"
-  never:
-    - "just 'Error' or technical text"
+  CardGrid:
+    description: "Grid of cards with consistent gap"
+    rules:
+      - use grid_gap from density system
+      - equal visual weight or intentional hierarchy
+      - no random spacing
 
-List:
-  states: [loading, empty, error, populated]
-  never:
-    - "infinite list without pagination or virtualization on large data"
+  DataTable:
+    description: "Readable data table or list"
+    rules:
+      - consistent row height and padding
+      - clear column alignment
+      - muted secondary text
+      - empty and loading states
 
-Form:
-  states: [idle, submitting, success, error]
-  never:
-    - "submit without state indication"
-    - "errors only in alert, without binding to fields"
+  SidebarLayout:
+    description: "Cabinet layout with sidebar + content"
+    rules:
+      - sidebar width from density system
+      - consistent content padding
+      - clear active state
 
-# Cabinet / Dashboard standards (use these by default for admin UIs)
+  EmptyState:
+    description: "Friendly empty state"
+    rules:
+      - icon (Tabler) + title + short description
+      - optional primary action
+      - not centered wall of text
 
-ModalDialog:
-  description: "Focused overlay for confirmations or short forms (HeroUI Modal style)"
-  footer: "max 2 buttons"
-  layout: "title + content + actions aligned consistently"
-  interactions: "smooth enter/exit, backdrop, focus management"
-  never:
-    - "three or more buttons"
-    - "cramped or random button order"
-
-CardGrid:
-  description: "Responsive grid of cards"
-  columns: "auto-fit with consistent gap from spacing scale"
-  cards: "use Card component with consistent elevation and compound structure"
-  never:
-    - "no grid, just stacked or random placement"
-    - "ugly flat cards without hierarchy"
-
-DataTable:
-  description: "Tabular data with consistent styling"
-  states: [loading, empty, error, populated]
-  features: "optional sorting, pagination, row actions with Tabler icons"
-
-SidebarLayout:
-  description: "Typical cabinet navigation + content"
-  nav: "consistent items with Tabler icons"
-  content: "clear max-width or fluid with proper padding"
-
-# When transforming an existing cabinet, prefer these patterns + HeroUI-level polish to create visual and interactive "wow".
+  FormSection:
+    description: "Grouped form fields"
+    rules:
+      - consistent field spacing
+      - clear labels
+      - validation states
